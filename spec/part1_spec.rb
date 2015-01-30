@@ -25,9 +25,9 @@ describe "#sum_to_n?" do
     expect { sum_to_n?([1,2,3],4) }.not_to raise_error
   end
   it "returns the correct value" do
-    sum_to_n?([1,2,3,4,5], 5).should be_true
-    sum_to_n?([1,2,5,6,7,8], 3).should be_true
-    sum_to_n?([100,50,50,2,100,4,5], 100).should be_true
-    sum_to_n?([1,2,3,4,5], -3).should be_false
+    sum_to_n?([1,2,3,4,5], 5).should be_truthy
+    sum_to_n?([1,2,5,6,7,8], 3).should be_truthy
+    sum_to_n?([100,50,50,2,100,4,5], 100).should be_truthy
+    sum_to_n?([1,2,3,4,5], -3).should be_falsey
   end
 end

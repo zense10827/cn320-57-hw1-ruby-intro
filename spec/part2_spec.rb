@@ -17,8 +17,8 @@ describe "#starts_with_consonant?" do
     expect { starts_with_consonant?("d") }.not_to raise_error()
   end
   it "The starts_with_consonant? method returns the correct boolean" do
-    starts_with_consonant?("asdfgh").should_not be_true, "Incorrect results for input: \"asdfgh\""
-    starts_with_consonant?("Veeeeeeee").should be_true, "Incorrect results for input: \"Veeeeeeee\""
+    starts_with_consonant?("asdfgh").should_not be_truthy, "Incorrect results for input: \"asdfgh\""
+    starts_with_consonant?("Veeeeeeee").should be_truthy, "Incorrect results for input: \"Veeeeeeee\""
   end
 end
 describe "#binary_multiple_of_4?" do
@@ -26,8 +26,8 @@ describe "#binary_multiple_of_4?" do
     expect { binary_multiple_of_4?("yes") }.not_to raise_error()
   end
   it "The binary_multiple_of_4? method returns the correct boolean" do
-    binary_multiple_of_4?("111111101").should_not be_true, "Incorrect results for input: \"111111101\""
+    binary_multiple_of_4?("111111101").should_not be_truthy, "Incorrect results for input: \"111111101\""
 
-    binary_multiple_of_4?("1010101010100").should be_true, "Incorrect results for input: \"1010101010100\""
+    binary_multiple_of_4?("1010101010100").should be_truthy, "Incorrect results for input: \"1010101010100\""
   end
 end
